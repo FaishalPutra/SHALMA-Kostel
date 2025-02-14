@@ -11,3 +11,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     elements.forEach(el => observer.observe(el));
 });
+
+
+function showTab(tabId) {
+    // Menghapus class 'active' dari semua tombol
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Menghapus class 'active' dari semua konten
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+
+    // Menambahkan class 'active' pada tombol yang dipilih
+    document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+
+    // Menampilkan konten yang sesuai
+    document.getElementById(tabId).classList.add('active');
+}

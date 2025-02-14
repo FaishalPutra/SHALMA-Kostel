@@ -15,16 +15,10 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Profile ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Tentang Kami</a></li>
-                        <li><a href="#">Visi & Misi</a></li>
-                        <li><a href="#">Struktur Organisasi</a></li>
-                    </ul>
-                </li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#services">Facilities</a></li>
                 <li><a href="#">Product</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Galery</a></li>
                 <li><a href="#" class="btn-nav">Contact Us</a></li>
             </ul>
             <div class="menu-toggle">&#9776;</div>
@@ -41,5 +35,82 @@
             <img src="Resource/back.jpg" alt="Elegant Design">
         </div>
     </section>
+
+    <section id="profile" class="profile-section">
+        <h2>SHALMA Profile</h2>
+        <p class="profile-description">
+            SHALMA KOSTEL SYARIAH adalah tempat kos syariah islami yang berlokasi di Pengkol, Jepara. Kami didirikan pada tanggal 1 Mei 2021 dengan tujuan untuk menyediakan tempat kos yang nyaman, ramah, dan aman bagi pelanggan. Kami berkomitmen untuk menerapkan prinsip syariah islami dalam pengelolaan tempat kos kami.
+        </p>
+        
+        <!-- Tab Navigation -->
+        <div class="profile-tabs">
+            <button class="tab-button" onclick="showTab('vision')">Vision</button>
+            <button class="tab-button" onclick="showTab('mission')">Mission</button>
+            <button class="tab-button" onclick="showTab('values')">Values</button>
+        </div>
+    
+        <!-- Tab Content -->
+        <div class="profile-content">
+    
+            <div id="vision" class="tab-content">
+                <div class="text">
+                    <h3>Our Vision</h3>
+                    <p>Menjadikan tempat kos pilihan utama di Jepara.</p>
+                </div>
+            </div>
+    
+            <div id="mission" class="tab-content">
+                <div class="text">
+                    <h3>Our Mission</h3>
+                    <p>Menciptakan lingkungan kos nyaman dan ramah pada pelanggan.</p>
+                </div>
+            </div>
+    
+            <div id="values" class="tab-content">
+                <div class="text">
+                    <h3>Our Values</h3>
+                    <p>1. Nyaman: Kami berusaha untuk menciptakan lingkungan kos yang nyaman dan menyenangkan bagi pelanggan.</p>
+                    <p>2. Ramah: Kami berkomitmen untuk menyediakan pelayanan yang ramah dan sopan kepada pelanggan.</p>
+                    <p>3. Aman: Kami berusaha untuk menciptakan lingkungan kos yang aman dan terjamin bagi pelanggan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <h2>Facilities</h2>
+        <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+        
+        <div class="service-container">
+            <div class="service-box blue">
+                <div class="service-icon">
+                    <img src="Resource/icon-development.png" alt="Development">
+                </div>
+                <h3>DEVELOPMENT</h3>
+            </div>
+    
+            <div class="service-box orange">
+                <div class="service-icon">
+                    <img src="Resource/icon-design.png" alt="Design">
+                </div>
+                <h3>DESIGN</h3>
+            </div>
+    
+            <div class="service-box red">
+                <div class="service-icon">
+                    <img src="Resource/icon-concept.png" alt="Concept">
+                </div>
+                <h3>CONCEPT</h3>
+            </div>
+    
+            <div class="service-box dark">
+                <div class="service-icon">
+                    <img src="Resource/icon-system.png" alt="System">
+                </div>
+                <h3>SYSTEM</h3>
+            </div>
+        </div>
+    </section>
+    
 </body>
 </html>
