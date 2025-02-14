@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll(".hero-text, .hero-image");
+    const elements = document.querySelectorAll(".hero-text, .hero-image, .profile-description, .profile-tabs, .htitle, .service-container");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
