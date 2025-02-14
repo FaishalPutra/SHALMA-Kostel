@@ -1,0 +1,273 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F5F5F7; /* Warna latar belakang lebih soft */
+    color: #222;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF; /* Navbar tetap bersih */
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 70px; /* Pastikan navbar memiliki tinggi tetap */
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #001F3F; /* Biru navy sesuai logo */
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: #D72638; /* Merah dari logo */
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    list-style: none;
+    width: 180px;
+    top: 40px;
+    left: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    display: block;
+    color: #001F3F;
+}
+
+.dropdown-menu a:hover {
+    background: #D72638;
+    color: #FFFFFF;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px; /* Mengurangi padding agar lebih kecil */
+    height: 63vh; /* Mengurangi tinggi hero agar lebih kecil */
+    background: #001F3F; /* Biru navy dari logo */
+    color: white;
+    margin-top: 110px; /* Memberikan jarak dari navbar */
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    color: #E0C097; /* Gold Soft untuk tampilan premium */
+}
+
+.hero-text span {
+    color: #A8A29E; /* Abu-abu netral */
+    font-weight: bold;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    color: #D9D9D9;
+}
+
+.btn {
+    display: inline-block;
+    background: #D72638; /* Merah dari logo */
+    color: #FFFFFF;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #B71C29;
+    color: #FFFFFF;
+}
+
+/* Hero Image */
+.hero-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: 75%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi Awal: Opacity 0 dan Skala Kecil */
+.hero-text, .hero-image {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Ketika elemen terlihat di layar, tampilkan animasi */
+.hero-text.show, .hero-image.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #001F3F;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 60px 30px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 70%;
+        margin-top: -20px;
+    }
+
+    .hero-image img {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero-image {
+        width: 85%;
+        margin-top: -10px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+    }
+
+    .hero-image {
+        width: 90%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
